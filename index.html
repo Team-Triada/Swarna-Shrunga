@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Swarnashrunga — Authentic Coorg Filter Coffee Decoction</title>
+  <meta name="description" content="Swarnashrunga Filter Coffee Decoction brings the authentic taste of Coorg coffee to your home. 100% natural, premium 80:20 blend, crafted from AA quality export beans. Cash on Delivery available across India.">
+  <meta name="keywords" content="filter coffee, Coorg coffee, South Indian coffee, coffee decoction, Swarnashrunga, Arabica, Robusta, Cash on delivery coffee">
+  <meta name="theme-color" content="#150C07">
+  
+  <!-- Preload fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <!-- ===== TOP ANNOUNCEMENT BAR ===== -->
+<!-- ===== NAVIGATION ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">SWARNASHRUNGA<span class="tm-symbol">™</span></a>
+      
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#hero" class="nav-link active">Home</a></li>
+        <li><a href="#offers" class="nav-link">Packs & Offers</a></li>
+        <li><a href="#highlights" class="nav-link">Why Us</a></li>
+        <li><a href="#about" class="nav-link">Our Story</a></li>
+        <li><a href="#blend" class="nav-link">The Blend</a></li>
+        <li><a href="#preparation" class="nav-link">Recipe</a></li>
+        <li><a href="#video" class="nav-link">Media</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li><a href="#contact" class="nav-cta">Order — COD</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="#contact" class="mobile-cta-btn">Order COD</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Navigation Overlay Drawer -->
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero" id="hero">
+    <!-- Hero Media Wrap with video + fallback poster -->
+    <div class="hero-video-wrap">
+      <video id="heroVideo" autoplay muted loop playsinline webkit-playsinline preload="auto" poster="imageandvedio/coffee_image.jpeg">
+        <source src="imageandvedio/coffee_video.mp4" type="video/mp4">
+      </video>
+      <div class="hero-fallback-img" style="background-image: url('imageandvedio/coffee_image.jpeg');"></div>
+    </div>
+    
+    <div class="hero-overlay"></div>
+    
+    <div class="hero-content">
+      <h1 class="hero-title">
+        The Real Taste of <span class="gold-gradient">Coorg</span>
+      </h1>
+
+      <p class="hero-subtitle">
+        Authentic Coorg filter coffee decoction, crafted from carefully selected
+        coffee beans for a rich, bold South Indian coffee experience at home.
+      </p>
+
+      <div class="hero-buttons">
+        <a
+          href="https://wa.me/917483412045?text=Hi%20Swarnashrunga%20Coffee%2C%20I%20would%20like%20to%20place%20an%20order%20via%20Cash%20on%20Delivery."
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-primary"
+        >
+          <span>ORDER NOW — CASH ON DELIVERY</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- ===== TRUST & PROMO STRIP ===== -->
+
+  <!-- ===== PRODUCT PACKS & PROMOTIONAL OFFERS ("ADS & PACKS") ===== -->
+  <section class="offers-section" id="offers">
+    <div class="section-header">
+      <span class="section-label">Fresh Decoction Packs</span>
+      <h2 class="section-title">Choose Your <span class="gold-text">Fresh Batch</span> Pack</h2>
+      <p class="section-desc">Factory-prepared under strict quality standards. Shipped fresh with Cash on Delivery across India.</p>
+    </div>
+
+    <div class="offers-grid">
+      <!-- Pack 1 -->
+      <div class="offer-card">
+        <div class="offer-badge">Starter Pack</div>
+        <h3 class="offer-title">Single Bottle (250 ml)</h3>
+        <p class="offer-subtitle">Ideal for trying the authentic Coorg decoction taste.</p>
+        <div class="offer-price">
+          <span class="price-val">₹180</span>
+          <span class="price-unit">/ 250ml bottle</span>
+        </div>
+        <ul class="offer-features">
+          <li>Makes ~18–25 cups of strong filter coffee</li>
+          <li>35-Day Shelf Life at room temp</li>
+          <li>100% Natural & AA Export Beans</li>
+          <li>Cash on Delivery Available</li>
+        </ul>
+        <button onclick="selectPack('Single Bottle (250 ml) - ₹180', 1, 180)" class="btn-offer">
+          Order 1 Bottle — COD
+        </button>
+      </div>
+
+      <!-- Pack 2 (Bestseller) -->
+      <div class="offer-card popular">
+        <div class="popular-tag"> MOST POPULAR — SAVE 10%</div>
+        <div class="offer-badge gold">Value Twin Pack</div>
+        <h3 class="offer-title">2 x 250 ml Bottles</h3>
+        <p class="offer-subtitle">Perfect for daily coffee lovers & small families.</p>
+        <div class="offer-price">
+          <span class="price-val">₹340</span>
+          <span class="price-original">₹360</span>
+          <span class="price-unit">/ 2 bottles</span>
+        </div>
+        <ul class="offer-features">
+          <li>Makes ~36–50 cups of delicious Kaapi</li>
+          <li>Fresh batch sealed for maximum aroma</li>
+          <li>Free COD & Express Handling</li>
+          <li>Includes Step-by-Step Recipe Guide</li>
+        </ul>
+        <button onclick="selectPack('Twin Value Pack (2 Bottles) - ₹340', 2, 340)" class="btn-offer btn-gold">
+          Order Twin Pack — COD
+        </button>
+      </div>
+
+      <!-- Pack 3 -->
+      <div class="offer-card">
+        <div class="offer-badge">Family / Commercial Pack</div>
+        <h3 class="offer-title">5 x 250 ml Value Pack</h3>
+        <p class="offer-subtitle">Great for coffee enthusiasts, offices & gatherings.</p>
+        <div class="offer-price">
+          <span class="price-val">₹790</span>
+          <span class="price-original">₹900</span>
+          <span class="price-unit">/ 5 bottles</span>
+        </div>
+        <ul class="offer-features">
+          <li>Makes ~90–125 cups of filter coffee</li>
+          <li>Save ₹110 on your order</li>
+          <li>Free Express Shipping Across India</li>
+          <li>Cash on Delivery Guaranteed</li>
+        </ul>
+        <button onclick="selectPack('Family Value Pack (5 Bottles) - ₹790', 5, 790)" class="btn-offer">
+          Order 5 Bottles — COD
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HIGHLIGHTS / WHY SWARNASHRUNGA ===== -->
+  <section class="highlights" id="highlights">
+    <div class="section-header">
+      <span class="section-label">Why Choose Swarnashrunga</span>
+      <h2 class="section-title">The Real Taste of <br>Coorg</h2>
+      <div class="divider"></div>
+    </div>
+
+    <div class="highlights-grid">
+      <div class="highlight-card">
+        <div class="highlight-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2z"/><path d="M12 6v6l4 2"/></svg>
+        </div>
+        <h3>100% Natural Essence</h3>
+        <p>Free of artificial preservatives, flavors, or chemical additives. Every drop captures nature's pure coffee essence — nothing added, nothing compromised.</p>
+      </div>
+
+      <div class="highlight-card">
+        <div class="highlight-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 8h1a4 4 0 0 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+        </div>
+        <h3>Authentic South Indian Profile</h3>
+        <p>Delivers a bold, aromatic brew with a strong body and traditional chicory balance (80:20), ideal for classic filter coffee lovers.</p>
+      </div>
+
+      <div class="highlight-card">
+        <div class="highlight-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+        </div>
+        <h3>Factory-Level Consistency</h3>
+        <p>Prepared in a controlled hygienic production facility under Central Govt Food Research Norms to ensure every bottle meets precise standards.</p>
+      </div>
+
+      <div class="highlight-card">
+        <div class="highlight-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <h3>Instant 10-Second Convenience</h3>
+        <p>Eliminates the wait time and cleanup of traditional brass filters — simply mix with hot frothy milk and sugar for an instant gourmet cup.</p>
+      </div>
+
+      <div class="highlight-card">
+        <div class="highlight-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        </div>
+        <h3>35-Day Room Temp Shelf Life</h3>
+        <p>Factory-prepared to maintain high standards of freshness and aroma for 35 days, allowing you to enjoy authentic coffee at your own pace.</p>
+      </div>
+
+      <div class="highlight-card">
+        <div class="highlight-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <h3>AA Export-Grade Beans</h3>
+        <p>We source only top AA quality coffee seeds directly from sun-drenched Coorg estates, ensuring dense flavor and lingering aroma.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT US SECTION ===== -->
+  <section class="about" id="about">
+    <div class="about-grid">
+      <div class="about-text">
+        <span class="section-label">Our Story & Heritage</span>
+        <h2 class="section-title">Our Roots in <span class="gold-text">Coorg</span></h2>
+        <div class="divider"></div>
+        
+        <p>
+          At Swarnashrunga, we believe that the true soul of South India lies in a fresh, rich cup of authentic filter coffee. We make our decoction the traditional way, honoring the heritage of pure, full-bodied Kaapi so you can enjoy it instantly at home.
+        </p>
+        
+        <blockquote class="quote-box">
+          "We don't manufacture taste; we simply bring out what nature already put into the coffee bean. Respect the bean, and it will respect your cup."
+        </blockquote>
+
+        <p>
+          We select AA quality export-grade seeds for our coffee decoction, sourced directly from sun-drenched estates in Coorg, Karnataka. Prepared using natural brewing processes following Central Government Food Research Institute guidelines, our decoction offers pure taste with zero chemical additives.
+        </p>
+
+        <div class="about-stats-grid">
+          <div class="stat-card">
+            <span class="stat-value">AA</span>
+            <span class="stat-desc">Export Grade Beans</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-value">80:20</span>
+            <span class="stat-desc">Perfect Kaapi Blend</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-value">35</span>
+            <span class="stat-desc">Days Fresh Shelf Life</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-value">100%</span>
+            <span class="stat-desc">Natural & Pure</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-visual">
+        <div class="about-img-frame">
+          <img src="imageandvedio/coffee_image.jpeg" alt="Swarnashrunga Authentic Coorg Filter Coffee in traditional brass filter tumbler" loading="lazy">
+        </div>
+        <div class="manufacturer-badge-card">
+          <h4>Swarna Shrunga Enterprises</h4>
+          <p> Hemmane, Shanivarsanthe Hobli, Coorg District, Karnataka</p>
+          <p> Customer Care: <strong>+91 74834 12045</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== THE BLEND SECTION ===== -->
+  <section class="blend" id="blend">
+    <div class="section-header">
+      <span class="section-label">The Science of Flavor</span>
+      <h2 class="section-title">Our Master <span class="gold-text">80:20</span> Formula</h2>
+      <p class="section-desc">Carefully balanced to achieve dense body, smooth bitterness, and lingering rich aftertaste.</p>
+    </div>
+
+    <div class="blend-content">
+      <div class="blend-visual">
+        <div class="blend-bar-wrap">
+          <div class="blend-bar-label">
+            <span>Arabica Coffee (AA Grade)</span>
+            <span class="blend-pct">60%</span>
+          </div>
+          <div class="blend-bar"><div class="blend-bar-fill" style="width: 60%;"></div></div>
+          <span class="blend-note">Delivers sweet aroma & subtle notes</span>
+        </div>
+
+        <div class="blend-bar-wrap">
+          <div class="blend-bar-label">
+            <span>Robusta & Peaberry</span>
+            <span class="blend-pct">20%</span>
+          </div>
+          <div class="blend-bar"><div class="blend-bar-fill" style="width: 20%;"></div></div>
+          <span class="blend-note">Gives rich body, bold crema & strength</span>
+        </div>
+
+        <div class="blend-bar-wrap">
+          <div class="blend-bar-label">
+            <span>Premium Chicory</span>
+            <span class="blend-pct">20%</span>
+          </div>
+          <div class="blend-bar"><div class="blend-bar-fill" style="width: 20%;"></div></div>
+          <span class="blend-note">Provides traditional South Indian thickness & color</span>
+        </div>
+
+        <!-- Flavor Radar Metrics -->
+        <div class="flavor-metrics">
+          <div class="metric">
+            <span class="metric-name">Aroma</span>
+            <div class="stars">★★★★★</div>
+          </div>
+          <div class="metric">
+            <span class="metric-name">Body / Thickness</span>
+            <div class="stars">★★★★★</div>
+          </div>
+          <div class="metric">
+            <span class="metric-name">Bitterness Balance</span>
+            <div class="stars">★★★★☆</div>
+          </div>
+          <div class="metric">
+            <span class="metric-name">Aftertaste</span>
+            <div class="stars">★★★★★</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="blend-info">
+        <h3>Crafted for the Authentic Cup</h3>
+        <p>An essential factor in legendary South Indian filter coffee is the exact coffee-to-chicory ratio. We use 80% pure coffee and 20% chicory — a time-tested formulation perfected over generations.</p>
+        <p>Within our 80% coffee core, we blend 60% high-elevation Arabica with 20% select Robusta & Peaberry. This proportion creates an unmatched balance rarely found in mass commercial brands.</p>
+
+        <div class="blend-tags">
+          <span class="blend-tag">AA Grade Beans</span>
+          <span class="blend-tag">Coorg Estate Fresh</span>
+          <span class="blend-tag">Export Quality</span>
+          <span class="blend-tag">Slow Brewed</span>
+          <span class="blend-tag">Zero Preservatives</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PREPARATION RECIPE & RATIO CALCULATOR ===== -->
+  <section class="preparation" id="preparation">
+    <div class="section-header center">
+      <span class="section-label">Simple Recipe Guide</span>
+      <h2 class="section-title">Prepare <span class="gold-text">Restaurant-Style</span> Filter Coffee at Home</h2>
+      <p class="section-desc">No brass filter setup required. Enjoy hot frothy Kaapi in 3 quick steps.</p>
+    </div>
+
+    <div class="prep-steps-grid">
+      <div class="prep-card">
+        <div class="prep-num">01</div>
+        <h4>Measure Decoction</h4>
+        <p>Pour 10 to 15 ml of Swarnashrunga decoction into your coffee tumbler or davara.</p>
+      </div>
+
+      <div class="prep-card">
+        <div class="prep-num">02</div>
+        <h4>Heat Frothy Milk</h4>
+        <p>Boil 80 to 100 ml of full-cream fresh milk until piping hot and frothy.</p>
+      </div>
+
+      <div class="prep-card">
+        <div class="prep-num">03</div>
+        <h4>Combine & Pour</h4>
+        <p>Pour the hot milk over decoction, add sugar to taste, and froth between tumbler & davara!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MEDIA, VIDEO & AUDIO EXPERIENCE ===== -->
+  <section class="video-section" id="video">
+    <div class="section-header center">
+      <span class="section-label">Media & Craftsmanship</span>
+      <h2 class="section-title">Watch the <span class="gold-text">Brewing Story</span></h2>
+      <p class="section-desc">Experience how our rich decoction is prepared in Coorg, Karnataka.</p>
+    </div>
+
+    <div class="video-container">
+      <div class="video-wrapper">
+        <video id="craftVideo" controls preload="metadata" playsinline webkit-playsinline poster="imageandvedio/coffee_image.jpeg">
+          <source src="imageandvedio/coffee_video.mp4" type="video/mp4">
+          Your browser does not support HTML5 video.
+        </video>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CUSTOMER REVIEWS ===== -->
+  <section class="reviews-section">
+    <div class="section-header center">
+      <span class="section-label">Real Coffee Lovers</span>
+      <h2 class="section-title">What Our Customers Say</h2>
+    </div>
+
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p class="review-text">"Reminds me of my childhood mornings in Madikeri! The decoction is thick, bold, and has that authentic Coorg aroma. Ordering 2 more bottles!"</p>
+        <div class="reviewer">
+          <strong>Ramesh Rao</strong>
+          <span>Bangalore, Karnataka</span>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p class="review-text">"Super convenient for office mornings. No messing around with brass filters. Just add hot milk and sugar, and you get pure filter coffee."</p>
+        <div class="reviewer">
+          <strong>Priya Sundaram</strong>
+          <span>Chennai, Tamil Nadu</span>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p class="review-text">"The Cash on Delivery option was smooth. Got the package delivered in 2 days. The 80:20 blend ratio is spot on!"</p>
+        <div class="reviewer">
+          <strong>Kiran Hegde</strong>
+          <span>Mysuru, Karnataka</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT & CASH ON DELIVERY ORDER FORM ===== -->
+  <section class="contact" id="contact">
+    <div class="section-header">
+      <span class="section-label">Direct Order</span>
+      <h2 class="section-title">Order Your <span class="gold-text">Decoction</span> Bottle Today</h2>
+      <p class="section-desc">Fill out the quick order form below. Pay via Cash on Delivery when it reaches your home.</p>
+    </div>
+
+    <div class="contact-grid">
+      <!-- Order Form -->
+      <div class="contact-form-card">
+        <h3>Order Form — Cash on Delivery (COD)</h3>
+        
+        <form class="contact-form" id="orderForm" onsubmit="handleOrder(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="custName">Full Name *</label>
+              <input type="text" id="custName" name="name" required placeholder="Enter your full name">
+            </div>
+            <div class="form-group">
+              <label for="custPhone">Phone Number *</label>
+              <input type="tel" id="custPhone" name="phone" required placeholder="+91 XXXXX XXXXX">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="custAddress">Delivery Address with Pincode *</label>
+            <textarea id="custAddress" name="address" required placeholder="House No., Street, City, State & Pincode"></textarea>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="custQty">Select Pack / Quantity *</label>
+              <select id="custQty" name="quantity" onchange="calculateOrderTotal()">
+                <option value="1 Bottle (250ml) - ₹180">1 Bottle (250ml) — ₹180</option>
+                <option value="Twin Value Pack (2 x 250ml) - ₹340" selected>Twin Value Pack (2 x 250ml) — ₹340 (Save 10%)</option>
+                <option value="Family Pack (5 x 250ml) - ₹790">Family Pack (5 x 250ml) — ₹790 (Save ₹110)</option>
+                <option value="Commercial 10 Pack - ₹1500">Commercial 10 Pack — ₹1500</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="custBrew">Preferred Brew Strength</label>
+              <select id="custBrew" name="brew">
+                <option value="Strong (Classic Coorg)">Strong (Classic Coorg)</option>
+                <option value="Medium Smooth">Medium Smooth</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Order Summary Card -->
+          <div class="order-summary-box">
+            <div class="summary-line">
+              <span>Estimated Order Total:</span>
+              <strong id="orderTotalVal" class="gold-text">₹340</strong>
+            </div>
+            <div class="summary-line sub">
+              <span>Payment Mode:</span>
+              <span class="cod-tag"> Cash on Delivery (COD)</span>
+            </div>
+          </div>
+
+          <button type="submit" class="btn-primary form-submit-btn">
+            <span>Place Order via WhatsApp / COD</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </button>
+        </form>
+      </div>
+
+      <!-- Contact Info Card -->
+      <div class="contact-info-card">
+        <div class="contact-card-header">
+          <h3>Contact Manufacturer</h3>
+          <p>We are happy to assist with bulk orders, hotel supply, or delivery status.</p>
+        </div>
+
+        <div class="info-item">
+          <div class="info-icon"></div>
+          <div>
+            <h4>Manufacturer Name</h4>
+            <p><strong>Swarna Shrunga Enterprises</strong></p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <div class="info-icon"></div>
+          <div>
+            <h4>Location</h4>
+            <p>Hemmane, Shanivarsanthe Hobli<br>Coorg District, Karnataka, India</p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <div class="info-icon"></div>
+          <div>
+            <h4>Customer Care & Direct Call</h4>
+            <p><a href="tel:+917483412045" class="phone-link">+91 74834 12045</a></p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <div class="info-icon"></div>
+          <div>
+            <h4>Instant WhatsApp Help</h4>
+            <p><a href="https://wa.me/917483412045?text=Hi%20Swarnashrunga%20Coffee%2C%20I%20have%20an%20inquiry" target="_blank" class="whatsapp-link">Chat on WhatsApp (+91 74834 12045)</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ SECTION ===== -->
+  <section class="faq-section">
+    <div class="section-header center">
+      <span class="section-label">Common Questions</span>
+      <h2 class="section-title">Frequently Asked Questions</h2>
+    </div>
+
+    <div class="faq-container">
+      <details class="faq-item" open>
+        <summary class="faq-question">What is the shelf life of Swarnashrunga Filter Coffee Decoction?</summary>
+        <div class="faq-answer">
+          <p>Swarnashrunga decoction has a shelf life of 35 days at room temperature when unopened. Once opened, keep it refrigerated and consume within 15–20 days for maximum aroma and flavor.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">Do I need to boil the decoction before mixing?</summary>
+        <div class="faq-answer">
+          <p>No, there is no need to boil the decoction itself! Simply pour 10–15 ml of decoction into your cup and pour boiling, frothy hot milk directly over it.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">How does Cash on Delivery (COD) work?</summary>
+        <div class="faq-answer">
+          <p>When you submit your order form, your details are received by our delivery team. We ship your fresh bottle via express courier, and you pay cash directly to the delivery person when the package arrives.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">Are there any artificial preservatives or added sugars?</summary>
+        <div class="faq-answer">
+          <p>None at all! Swarnashrunga decoction is 100% natural, containing only 80% AA grade coffee and 20% premium chicory brewed in pure water according to Central Govt food research norms.</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-col brand-col">
+        <a href="#hero" class="footer-logo">SWARNASHRUNGA<span class="tm-symbol">™</span></a>
+        <p>Authentic Coorg Filter Coffee Decoction. Crafted from AA-grade beans, brewed the traditional way. 100% Natural. Zero Additives.</p>
+        <p class="compliance-note">Manufactured as per norms of Central Government Food Research Institute.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#offers">Packs & Offers</a></li>
+          <li><a href="#highlights">Why Swarnashrunga</a></li>
+          <li><a href="#about">Our Heritage</a></li>
+          <li><a href="#blend">80:20 Blend Ratio</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Customer Support</h4>
+        <ul>
+          <li><a href="#preparation">Recipe & Ratio Guide</a></li>
+          <li><a href="#contact">Order Cash on Delivery</a></li>
+          <li><a href="tel:+917483412045">Call: +91 74834 12045</a></li>
+          <li><a href="https://wa.me/917483412045" target="_blank">WhatsApp Order</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Swarna Shrunga Enterprises. All rights reserved.</p>
+      <p>Hemmane, Shanivarsanthe Hobli, Coorg District, Karnataka, India.</p>
+    </div>
+  </footer>
+
+  <script src="index.js"></script>
+</body>
+</html>
