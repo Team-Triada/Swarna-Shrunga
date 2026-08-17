@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://team-triada.github.io/Swarna-Shrunga/sitemap.xml
+Sitemap: https://swarnashrunga.com/sitemap.xml

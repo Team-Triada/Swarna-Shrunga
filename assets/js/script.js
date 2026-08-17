@@ -19,17 +19,36 @@
 // ===== MOBILE MENU =====
 const hamburger = document.getElementById('menuToggle');
 const navMenu = document.getElementById('navLinks');
+const navBackdrop = document.getElementById('navBackdrop');
+
+function closeMenu() {
+  hamburger.classList.remove('active');
+  hamburger.setAttribute('aria-expanded', 'false');
+  navMenu.classList.remove('open');
+  navBackdrop.classList.remove('open');
+  document.body.classList.remove('menu-open');
+}
+
+function openMenu() {
+  hamburger.classList.add('active');
+  hamburger.setAttribute('aria-expanded', 'true');
+  navMenu.classList.add('open');
+  navBackdrop.classList.add('open');
+  document.body.classList.add('menu-open');
+}
 
 hamburger.addEventListener('click', () => {
-  hamburger.classList.toggle('active');
-  navMenu.classList.toggle('open');
+  navMenu.classList.contains('open') ? closeMenu() : openMenu();
+});
+
+navBackdrop.addEventListener('click', closeMenu);
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closeMenu();
 });
 
 navMenu.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => {
-    hamburger.classList.remove('active');
-    navMenu.classList.remove('open');
-  });
+  link.addEventListener('click', closeMenu);
 });
 
 // ===== SMOOTH SCROLL =====
