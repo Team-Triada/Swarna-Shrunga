@@ -342,3 +342,77 @@ img {
     max-height: 360px !important;
   }
 }
+
+/* ===== REMOVE UNNECESSARY PACK BUTTONS ===== */
+.pack-card .pack-btn,
+.pack-card button {
+  display: none !important;
+}
+
+.pack-card {
+  padding-bottom: 28px !important;
+}
+
+/* ===== MAKE PRODUCT/CONTENT IMAGES FIT ===== */
+.image-frame,
+.image-card {
+  overflow: hidden !important;
+}
+
+.image-frame img,
+.image-card img,
+.story-grid img {
+  width: 100% !important;
+  height: auto !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  display: block !important;
+}
+
+@media (max-width: 768px) {
+  .image-frame img,
+  .image-card img,
+  .story-grid img {
+    max-height: 360px !important;
+  }
+}
+/* ===== FIX CRAFTED FOR AUTHENTIC CUP CARDS ===== */
+
+.story-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 20px !important;
+  align-items: start !important;
+}
+
+.story-grid article {
+  height: auto !important;
+  min-height: 0 !important;
+  align-self: start !important;
+  overflow: hidden !important;
+  border-radius: 10px !important;
+  border: 1px solid rgba(180, 95, 45, 0.35) !important;
+  background: #241109 !important;
+}
+
+.story-grid article img {
+  display: block !important;
+  width: 100% !important;
+  height: 360px !important;
+  max-height: 360px !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  margin: 0 !important;
+}
+
+@media (max-width: 768px) {
+  .story-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .story-grid article img {
+    height: 300px !important;
+    max-height: 300px !important;
+    object-fit: cover !important;
+  }
+}
