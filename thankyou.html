@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Placed | Swarna Shrunga</title>
+  <meta name="robots" content="noindex, follow">
+  <link rel="icon" href="assets/images/logo.png" type="image/png">
+  <meta name="theme-color" content="#241408">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600;700&family=Marcellus&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    .thankyou-wrap{min-height:60vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:80px 24px;gap:18px}
+    .thankyou-check{width:88px;height:88px;border-radius:50%;background:linear-gradient(135deg,#4A7C59,#3A6348);display:flex;align-items:center;justify-content:center}
+    .thankyou-check svg{width:44px;height:44px;stroke:#fff;stroke-width:2.5;fill:none;stroke-linecap:round;stroke-linejoin:round}
+    .thankyou-wrap h1{font-family:'Marcellus',serif;font-size:clamp(1.6rem,4vw,2.4rem)}
+    .thankyou-wrap p{max-width:480px;color:var(--muted)}
+    .thankyou-actions{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:6px}
+    .thankyou-support{margin-top:22px;font-size:.85rem;color:var(--muted)}
+    .thankyou-support a{color:var(--gold-text);font-weight:600;text-decoration:none}
+    .thankyou-support a:hover{text-decoration:underline}
+  </style>
+</head>
+<body>
+
+<script>
+  if (!sessionStorage.getItem('orderJustPlaced')) {
+    window.location.replace('index.html');
+  } else {
+    sessionStorage.removeItem('orderJustPlaced');
+  }
+</script>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="ico-phone" viewBox="0 0 24 24"><path d="M5 4h3.5l1.5 4-2 1.5a11 11 0 0 0 5.5 5.5l1.5-2 4 1.5V18a2 2 0 0 1-2 2C10.5 20 4 13.5 4 6a2 2 0 0 1 1-2Z"/></symbol>
+  </defs>
+</svg>
+
+<header class="site-header" id="top">
+  <nav class="navbar">
+    <a class="brand" href="index.html#top">
+      <img src="assets/images/logo.png" alt="Swarnashrunga" class="brand-logo">
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks"><span></span><span></span><span></span></button>
+    <div class="nav-backdrop" id="navBackdrop"></div>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html#top">Home</a>
+      <a href="index.html#roots">About</a>
+      <a href="index.html#highlights">Our Coffee</a>
+      <a href="index.html#media">Video</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="index.html#cod">Contact</a>
+      <a class="btn btn-primary nav-cta-mobile" href="index.html#cod">Order Now<span class="btn-arrow" aria-hidden="true">→</span></a>
+    </div>
+    <a class="btn btn-primary nav-order" href="index.html#cod">Order Now<span class="btn-arrow" aria-hidden="true">→</span></a>
+  </nav>
+</header>
+
+<main>
+  <div class="thankyou-wrap">
+    <div class="thankyou-check"><svg viewBox="0 0 24 24"><path d="M5 12.5 10 17 19 7"/></svg></div>
+    <h1>Your Order Placed Successfully</h1>
+    <p>Thank you for choosing Swarna Shrunga Filter Coffee Decoction. We've received your order and will confirm it shortly. Pay cash when it's delivered to your doorstep.</p>
+    <div class="thankyou-actions">
+      <a class="btn btn-primary" href="index.html">Back to Home</a>
+      <a class="btn btn-outline" href="https://wa.me/917483412045?text=Hi%2C%20I%20just%20placed%20an%20order%20on%20your%20website%20and%20have%20a%20question." target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp btn-ico" aria-hidden="true"></i>Chat on WhatsApp</a>
+    </div>
+    <p class="thankyou-support">Have a question about your order? Reach us on WhatsApp above, or email <a href="mailto:swarnashrungacoffee@gmail.com">swarnashrungacoffee@gmail.com</a></p>
+  </div>
+</main>
+
+<footer class="footer" id="contact">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="assets/images/logo.png" alt="Swarnashrunga" class="footer-logo">
+      <p class="footer-sub">Filter Coffee Decoction</p>
+      <p>The real taste of Coorg coffee.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <a href="index.html#top">Home</a>
+      <a href="index.html#roots">About</a>
+      <a href="index.html#highlights">Our Coffee</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="index.html#cod">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact Us</h4>
+      <a href="tel:+917483412045">+91 74834 12045</a>
+      <a href="https://wa.me/917483412045" target="_blank" rel="noopener">WhatsApp Support</a>
+      <a href="mailto:swarnashrungacoffee@gmail.com">swarnashrungacoffee@gmail.com</a>
+      <span>Hemmane, Shanivarsanthe Hobli, Coorg District, Karnataka, India</span>
+    </div>
+    <div class="footer-col">
+      <h4>Follow Us</h4>
+      <div class="social-row">
+        <a href="#" aria-label="Facebook" class="social-ico"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram" class="social-ico"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="YouTube" class="social-ico"><i class="fa-brands fa-youtube"></i></a>
+        <a href="https://wa.me/917483412045" target="_blank" rel="noopener" aria-label="WhatsApp" class="social-ico"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <a href="https://triada.in" target="_blank" rel="noopener">Powered by Triada</a>
+    <span>© 2026 Swarna Shrunga Enterprises. All rights reserved.</span>
+  </div>
+</footer>
+
+<script src="assets/js/script.js"></script>
+</body>
+</html>

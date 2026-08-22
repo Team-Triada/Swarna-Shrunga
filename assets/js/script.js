@@ -24,6 +24,7 @@ const navBackdrop = document.getElementById('navBackdrop');
 function closeMenu() {
   hamburger.classList.remove('active');
   hamburger.setAttribute('aria-expanded', 'false');
+  hamburger.setAttribute('aria-label', 'Open menu');
   navMenu.classList.remove('open');
   navBackdrop.classList.remove('open');
   document.body.classList.remove('menu-open');
@@ -32,6 +33,7 @@ function closeMenu() {
 function openMenu() {
   hamburger.classList.add('active');
   hamburger.setAttribute('aria-expanded', 'true');
+  hamburger.setAttribute('aria-label', 'Close menu');
   navMenu.classList.add('open');
   navBackdrop.classList.add('open');
   document.body.classList.add('menu-open');
@@ -115,17 +117,52 @@ function showTestimonial(i) {
     testiAvatar.textContent = current.name.charAt(0);
     testiCard.classList.remove('fade');
   }, 220);
-  testiDots.forEach((dot, idx) => dot.classList.toggle('active', idx === testiIndex));
+  testiDots.forEach((dot, idx) => {
+    dot.classList.toggle('active', idx === testiIndex);
+    dot.setAttribute('aria-selected', idx === testiIndex ? 'true' : 'false');
+  });
 }
 
-document.getElementById('testiPrev').addEventListener('click', () => showTestimonial(testiIndex - 1));
-document.getElementById('testiNext').addEventListener('click', () => showTestimonial(testiIndex + 1));
-testiDots.forEach(dot => dot.addEventListener('click', () => showTestimonial(Number(dot.dataset.i))));
+const testiPrevBtn = document.getElementById('testiPrev');
+const testiNextBtn = document.getElementById('testiNext');
+if (testiCard && testiPrevBtn && testiNextBtn) {
+  testiPrevBtn.addEventListener('click', () => showTestimonial(testiIndex - 1));
+  testiNextBtn.addEventListener('click', () => showTestimonial(testiIndex + 1));
+  testiDots.forEach(dot => dot.addEventListener('click', () => showTestimonial(Number(dot.dataset.i))));
+}
+
+// ===== GOOGLE SHEETS ORDER LOG =====
+// See GOOGLE_SHEETS_SETUP.md for how to get this URL.
+const SHEETS_WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycbx0mU7gJPmj34a5XMIjZ1l7i-QgH7VFONl_WCWXe4ryAolw_Pu5ENQ5j7pzGkoNnrk/exec';
+
+function logOrderToSheet(order) {
+  if (!SHEETS_WEBHOOK_URL || SHEETS_WEBHOOK_URL.indexOf('PASTE_YOUR') === 0) return;
+  fetch(SHEETS_WEBHOOK_URL, {
+    method: 'POST',
+    mode: 'no-cors',
+    headers: { 'Content-Type': 'text/plain' },
+    body: JSON.stringify(order)
+  }).catch(function() {});
+}
+
+// ===== DIGIT-ONLY INPUTS =====
+['codPhone', 'codPin'].forEach(function(id) {
+  var el = document.getElementById(id);
+  if (el) el.addEventListener('input', function() {
+    el.value = el.value.replace(/[^0-9]/g, '');
+  });
+});
 
 // ===== CASH ON DELIVERY FORM HANDLER =====
 function handleOrder(e) {
   e.preventDefault();
   const form = e.target;
+
+  if (!form.checkValidity()) {
+    form.reportValidity();
+    return;
+  }
+
   const name = form.querySelector('#codName').value.trim();
   const phone = form.querySelector('#codPhone').value.trim();
   const address = form.querySelector('#codAddress').value.trim();
@@ -135,35 +172,13 @@ function handleOrder(e) {
   const qty = form.querySelector('#codQty').value;
   const landmark = form.querySelector('#codLandmark').value.trim();
 
-  if (!name || !phone || !address || !city || !state || !pin) {
-    alert('Please fill in all required fields.');
-    return;
-  }
-
-  var lines = [
-    'New Order - Swarnashrunga Coffee', '',
-    'Name: ' + name,
-    'Phone: ' + phone,
-    'Address: ' + address,
-    'City: ' + city,
-    'State: ' + state,
-    'PIN Code: ' + pin,
-    'Quantity: ' + qty
-  ];
-  if (landmark) lines.push('Landmark: ' + landmark);
-  lines.push('', 'Payment: Cash on Delivery');
-
-  var message = lines.join('\n');
-  var whatsappUrl = 'https://wa.me/917483412045?text=' + encodeURIComponent(message);
-  window.open(whatsappUrl, '_blank');
+  logOrderToSheet({ name: name, phone: phone, address: address, city: city, state: state, pin: pin, qty: qty, landmark: landmark });
 
   var btn = form.querySelector('button[type="submit"]');
-  var originalText = btn.textContent;
-  btn.textContent = 'Order Sent, Check WhatsApp';
+  btn.textContent = 'Order Placed';
   btn.style.background = 'linear-gradient(135deg, #4A7C59, #3A6348)';
   setTimeout(function() {
-    btn.textContent = originalText;
-    btn.style.background = '';
-    form.reset();
-  }, 4000);
+    sessionStorage.setItem('orderJustPlaced', '1');
+    window.location.href = 'thankyou.html';
+  }, 1200);
 }
