@@ -172,9 +172,11 @@ function handleOrder(e) {
   const qty = form.querySelector('#codQty').value;
   const landmark = form.querySelector('#codLandmark').value.trim();
 
+  var btn = form.querySelector('button[type="submit"]');
+  btn.disabled = true;
+
   logOrderToSheet({ name: name, phone: phone, address: address, city: city, state: state, pin: pin, qty: qty, landmark: landmark });
 
-  var btn = form.querySelector('button[type="submit"]');
   btn.textContent = 'Order Placed';
   btn.style.background = 'linear-gradient(135deg, #4A7C59, #3A6348)';
   setTimeout(function() {

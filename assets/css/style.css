@@ -275,11 +275,13 @@ details[open] .faq-chevron{transform:rotate(180deg)}
   .prep-step span{font-size:.7rem}
   .step-arrow{display:none}
   .image-frame img{height:280px}
-  .bottle-frame img{height:220px}
-  .cod-image-frame img{height:220px}
+  .bottle-frame{gap:4px;width:100vw;margin-left:calc(50% - 50vw);border-radius:0;padding:10px 2px}
+  .bottle-frame img{height:460px;max-width:50%;width:auto}
+  .cod-image-frame{width:100vw;margin-left:calc(50% - 50vw);border-radius:0;padding:10px 2px}
+  .cod-image-pair{gap:4px}
+  .cod-image-frame img,.cod-image-pair img{height:460px;max-width:50%;width:auto}
   .form-row{grid-template-columns:1fr}
   .cod-form input,.cod-form select{font-size:16px}
-  .cod-image-frame{padding:22px}
   .testimonial-card{padding:26px 20px}
   .testi-arrow{width:34px;height:34px}
   .testi-arrow .ico{width:14px;height:14px}
@@ -299,6 +301,8 @@ details[open] .faq-chevron{transform:rotate(180deg)}
   .center-title{font-size:1.5rem}
   .craft-grid{grid-template-columns:1fr}
   .craft-item img{height:200px}
+  .bottle-frame img{height:380px;max-width:50%;width:auto}
+  .cod-image-frame img,.cod-image-pair img{height:380px;max-width:50%;width:auto}
   .testimonial-quote{font-size:1.05rem}
   .pack-card{padding:22px}
   .price{font-size:1.6rem}
